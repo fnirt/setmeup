@@ -1,16 +1,17 @@
 
+
 #get settime
 cp /home/pi/setmeup/freshen /home/pi
 chmod +x /home/pi/setmeup/freshen
 cp /home/pi/setmeup/setdatetime /home/pi
 chmod +x /home/pi/setmeup/setdatetime
+./home/pi/setdatetime
 
 #add settime to rc.local/.bashrc
 #get freshen
 sudo apt-get install figlet -y
 sudo apt-get install toilet -y
 sudo apt-get install sl -y
-sudo apt-get install git -y
 sudo install rpi-update -y
 
 #RPi-Monitor Installation
@@ -42,3 +43,5 @@ git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
 cd RPi_Cam_Web_Interface
 chmod u+x *.sh
 ./install.sh
+
+
