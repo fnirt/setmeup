@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 #get settime
 cp /home/pi/setmeup/freshen /home/pi
