@@ -1,0 +1,44 @@
+
+#get settime
+cp /home/pi/setmeup/freshen /home/pi
+chmod +x /home/pi/setmeup/freshen
+cp /home/pi/setmeup/setdatetime /home/pi
+chmod +x /home/pi/setmeup/setdatetime
+
+#add settime to rc.local/.bashrc
+#get freshen
+sudo apt-get install figlet -y
+sudo apt-get install toilet -y
+sudo apt-get install sl -y
+sudo apt-get install git -y
+sudo install rpi-update -y
+
+#RPi-Monitor Installation
+sudo wget http://goo.gl/vewCLL -O /etc/apt/sources.list.d/rpimonitor.list
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2C0D3C0F 
+sudo apt-get update -y
+sudo apt-get install rpimonitor -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo /etc/init.d/rpimonitor update
+
+#webmin
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> deleteme
+sudo mv deleteme /etc/apt/sources.list.d/webmin.list
+
+echo "cd /root ; wget http://www.webmin.com/jcameron-key.asc ; apt-key add jcameron-key.asc" >> deleteme2.sh
+chmod +x deleteme2.sh
+sudo ./deleteme2.sh
+
+sudo apt-get update
+
+sudo apt-get install apt-transport-https -y
+sudo apt-get install webmin -y
+
+#Rpi_cam
+sudo apt-get update -y
+sudo apt-get dist-upgrade -y
+git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface.git
+cd RPi_Cam_Web_Interface
+chmod u+x *.sh
+./install.sh
