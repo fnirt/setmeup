@@ -1,0 +1,22 @@
+figlet dist-upgrade
+sudo apt-get dist-upgrade
+figlet debloating
+sudo apt-get purge wolfram-engine
+sudo apt-get remove --purge libreoffice*
+sudo apt-get purge minecraft-pi
+sudo apt-get purge sonic-pi
+figlet autoremove
+sudo apt-get autoremove
+figlet autoclean
+sudo apt-get autoclean
+figlet clean
+sudo apt-get clean
+figlet update
+sudo apt-get update
+figlet upgrade
+sudo apt-get upgrade
+figlet rpi-update
+sudo rpi-update
+figlet done
+
+
