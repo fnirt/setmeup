@@ -27,14 +27,14 @@ sudo apt-get upgrade -y
 sudo /etc/init.d/rpimonitor update
 
 #webmin
-echo "deb http://download.webmin.com/download/repository sarge contrib" >> deleteme
-sudo mv deleteme /etc/apt/sources.list.d/webmin.list
-echo "cd /root ; wget http://www.webmin.com/jcameron-key.asc ; apt-key add jcameron-key.asc" >> deleteme2.sh
-chmod +x deleteme2.sh
-sudo ./deleteme2.sh
-sudo apt-get update
-sudo apt-get install apt-transport-https -y
-sudo apt-get install webmin -y
+#echo "deb http://download.webmin.com/download/repository sarge contrib" >> deleteme
+#sudo mv deleteme /etc/apt/sources.list.d/webmin.list
+#echo "cd /root ; wget http://www.webmin.com/jcameron-key.asc ; apt-key add jcameron-key.asc" >> deleteme2.sh
+#chmod +x deleteme2.sh
+#sudo ./deleteme2.sh
+#sudo apt-get update
+#sudo apt-get install apt-transport-https -y
+#sudo apt-get install webmin -y
 
 #Rpi_cam
 sudo apt-get update -y
